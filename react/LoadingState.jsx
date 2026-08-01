@@ -10,7 +10,7 @@ import styles from './LoadingState.module.css'
 
 /**
  * Shared Triphype loading indicator (orbit dots + shimmer bar).
- * Requires `react-ggn-visual/tokens.css` for brand CSS variables.
+ * Requires `react-viz-suite/tokens.css` for brand CSS variables.
  *
  * @param {LoadingStateProps} props
  */

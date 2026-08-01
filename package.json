@@ -1,5 +1,5 @@
 {
-  "name": "react-ggn-visual",
+  "name": "react-viz-suite",
   "version": "0.3.0",
   "description": "Shared design tokens and React UI primitives (SoftList, charts, cards, tables)",
   "license": "UNLICENSED",
@@ -131,12 +131,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/giginkrishnan/react-ggn-visual"
+    "url": "https://github.com/giginkrishnan/react-viz-suite"
   },
   "bugs": {
-    "url": "https://github.com/giginkrishnan/react-ggn-visual/issues"
+    "url": "https://github.com/giginkrishnan/react-viz-suite/issues"
   },
-  "homepage": "https://github.com/giginkrishnan/react-ggn-visual#readme",
+  "homepage": "https://github.com/giginkrishnan/react-viz-suite#readme",
   "devDependencies": {
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",

@@ -1,4 +1,4 @@
-# `react-ggn-visual`
+# `react-viz-suite`
 
 Shared design tokens and React UI primitives (SoftList, charts, cards, tables) for Triphype admin, website, and corporate apps.
 
@@ -8,10 +8,10 @@ Formerly published as `@giginkrishnan/triphype-design`.
 
 ```bash
 # local (monorepo sibling)
-npm install file:../react-ggn-visual
+npm install file:../react-viz-suite
 
 # from npm
-npm install react-ggn-visual
+npm install react-viz-suite
 ```
 
 **Peers:** `react` ≥18, `react-dom` ≥18, `lucide-react` ≥0.400 (required for Toast, CopyableId, RangeCalendar).
@@ -21,20 +21,20 @@ Vite apps should transpile this package (unbuilt TSX + CSS modules):
 ```ts
 // vite.config.ts
 react({
-  exclude: /node_modules\/(?!react-ggn-visual)/,
+  exclude: /node_modules\/(?!react-viz-suite)/,
 })
 ```
 
 Next.js:
 
 ```js
-transpilePackages: ['react-ggn-visual']
+transpilePackages: ['react-viz-suite']
 ```
 
 ## CSS variables
 
 ```js
-import 'react-ggn-visual/tokens.css'
+import 'react-viz-suite/tokens.css'
 ```
 
 Fonts are **consumer-provided**. Override if needed:
@@ -49,7 +49,7 @@ Fonts are **consumer-provided**. Override if needed:
 ## Bootstrap / SCSS
 
 ```scss
-@import 'react-ggn-visual/bootstrap-map.scss';
+@import 'react-viz-suite/bootstrap-map.scss';
 ```
 
 ## React exports
@@ -64,7 +64,7 @@ import {
   Badge,
   CapsuleBarChart,
   LoadingState,
-} from 'react-ggn-visual/react'
+} from 'react-viz-suite/react'
 ```
 
 Subpaths (tree-friendlier):
@@ -96,7 +96,7 @@ import {
   SoftList,
   SoftListItem,
   SoftListLinkProvider,
-} from 'react-ggn-visual/react/SoftList'
+} from 'react-viz-suite/react/SoftList'
 import { Link } from 'react-router-dom'
 
 <SoftListLinkProvider component={Link}>
@@ -111,7 +111,7 @@ Without a provider, `to` rows render as `<a href={to}>`.
 ### LoadingState
 
 ```jsx
-import { LoadingState } from 'react-ggn-visual/react'
+import { LoadingState } from 'react-viz-suite/react'
 
 <LoadingState label="Loading trips…" />
 <LoadingState label="Checking your session…" variant="block" />

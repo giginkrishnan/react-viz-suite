@@ -1,0 +1,106 @@
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bar {
+  fill: var(--color-brand);
+}
+
+.barSoft {
+  fill: var(--color-brand-muted);
+}
+
+.barActive {
+  fill: var(--color-brand-deep);
+}
+
+.axis {
+  stroke: var(--color-line);
+  stroke-width: 1;
+}
+
+.line {
+  stroke: var(--color-brand-deep);
+}
+
+.dot {
+  fill: var(--color-surface);
+  stroke: var(--color-brand-deep);
+  stroke-width: 2;
+}
+
+.dotActive {
+  fill: var(--color-brand-deep);
+  stroke: var(--color-brand-deep);
+}
+
+.tick {
+  fill: var(--color-muted);
+  font-size: 10px;
+  font-family: var(--font-sans);
+}
+
+.donutWrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.25rem 0 0.5rem;
+  min-height: 150px;
+}
+
+.donutSvg {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.donutA {
+  stroke: var(--color-brand-deep);
+}
+
+.donutB {
+  stroke: var(--color-brand-muted);
+}
+
+.donutValue {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  fill: var(--color-ink);
+}
+
+.donutSub {
+  font-size: 10px;
+  fill: var(--color-muted);
+}
+
+.donutLegend {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.8125rem;
+  color: var(--color-muted-strong);
+}
+
+.donutLegend li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.swatchA,
+.swatchB {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.swatchA {
+  background: var(--color-brand-deep);
+}
+
+.swatchB {
+  background: var(--color-brand-muted);
+}

@@ -1,0 +1,38 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.85rem;
+  padding: 0 0.7rem;
+  border-radius: 10px;
+  border: 1.5px solid transparent;
+  box-sizing: border-box;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.upcoming {
+  background: var(--color-status-upcoming-bg);
+  color: var(--color-status-upcoming-fg);
+  border-color: var(--color-status-upcoming-border);
+}
+
+.confirmed {
+  background: var(--color-status-confirmed-bg);
+  color: var(--color-status-confirmed-fg);
+  border-color: var(--color-status-confirmed-border);
+}
+
+.completed {
+  background: var(--color-status-completed-bg);
+  color: var(--color-status-completed-fg);
+  border-color: var(--color-status-completed-border);
+}
+
+.neutral {
+  background: var(--color-status-neutral-bg);
+  color: var(--color-status-neutral-fg);
+  border-color: var(--color-status-neutral-border);
+}

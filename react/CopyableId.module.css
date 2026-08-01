@@ -1,0 +1,47 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.label {
+  color: var(--color-muted-strong);
+  flex-shrink: 0;
+}
+
+.code {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: var(--color-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sm {
+  font-size: 0.75rem;
+}
+
+.md {
+  font-size: 0.8125rem;
+}
+
+.button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.35rem;
+  height: 1.35rem;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--color-brand-deep);
+  background: var(--color-brand-soft);
+}

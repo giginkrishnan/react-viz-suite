@@ -1,0 +1,33 @@
+// Maps Triphype tokens onto Bootstrap / theme variables.
+// Import AFTER Bootstrap functions, BEFORE Bootstrap's variables / bootstrap.scss.
+@import './tokens.scss';
+
+// Primary brand
+$primary: $th-color-brand !default;
+$secondary: #000000 !default;
+
+// Body / surfaces
+$body-color: $th-color-ink !default;
+$body-bg: $th-color-canvas !default;
+$text-muted: $th-color-muted-strong !default;
+$border-color: $th-color-line !default;
+$light: $th-color-line-soft !default;
+$dark: $th-color-ink !default;
+
+// Radii (Bootstrap 5)
+$border-radius-sm: $th-radius-sm !default;
+$border-radius: $th-radius-md !default;
+$border-radius-lg: $th-radius-lg !default;
+$border-radius-pill: $th-radius-pill !default;
+
+// Focus / links lean on brand
+$link-color: $th-color-brand !default;
+$link-hover-color: $th-color-brand-deep !default;
+$input-focus-border-color: $th-color-brand-muted !default;
+$input-focus-box-shadow: 0 0 0 0.2rem rgba($th-color-brand, 0.15) !default;
+
+// App-level button helpers (Directory theme / TripHype web)
+$app-btn-primary-bg: $th-color-brand !default;
+$app-btn-primary-border: $th-color-brand !default;
+$app-btn-primary-hover-bg: $th-color-brand-deep !default;
+$app-btn-outline-color: #000000 !default;

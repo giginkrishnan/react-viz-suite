@@ -1,0 +1,66 @@
+/**
+ * Triphype design tokens (CSS variables).
+ * Fonts are consumer-provided — set --font-sans / --font-display as needed.
+ */
+:root {
+  /* Brand */
+  --color-brand: #148106;
+  --color-brand-soft: #e4f3e2;
+  --color-brand-muted: #6bb05f;
+  --color-brand-deep: #0f6504;
+
+  /* Dashboard accent */
+  --color-accent: #148106;
+  --color-accent-soft: #e4f3e2;
+  --color-accent-deep: #0f6504;
+  --color-accent-amber: #f0a64a;
+
+  /* Neutrals */
+  --color-ink: #1f2937;
+  --color-ink-soft: #374151;
+  --color-muted: #9ca3af;
+  --color-muted-strong: #6b7280;
+  --color-line: #e5e7eb;
+  --color-line-soft: #f3f4f6;
+  --color-surface: #ffffff;
+  --color-canvas: #f7f8fa;
+  --color-sidebar: #fafafa;
+
+  /* Status */
+  --color-status-upcoming-bg: #fdeedc;
+  --color-status-upcoming-fg: #c47a2e;
+  --color-status-upcoming-border: #d4924a;
+  --color-status-confirmed-bg: #e8f6e6;
+  --color-status-confirmed-fg: #148106;
+  --color-status-confirmed-border: #6bb05f;
+  --color-status-completed-bg: #fff1e8;
+  --color-status-completed-fg: #c45a2e;
+  --color-status-completed-border: #e08a5a;
+  --color-status-neutral-bg: #f3f4f6;
+  --color-status-neutral-fg: #6b7280;
+  --color-status-neutral-border: #d1d5db;
+
+  /* Typography (override in consumer if needed) */
+  --font-sans: 'Avenir', 'Segoe UI', sans-serif;
+  --font-display: 'Avenir', 'Segoe UI', sans-serif;
+
+  /* Layout */
+  --sidebar-width: 220px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-card: 22px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 180ms;
+  --duration-base: 320ms;
+  --duration-slow: 480ms;
+
+  /* Shadows */
+  --shadow-panel: 0 1px 2px rgb(17 24 39 / 4%), 0 12px 32px rgb(17 24 39 / 6%);
+  --shadow-card: 0 10px 30px rgb(0 0 0 / 5%);
+  --shadow-soft: 0 12px 32px rgb(15 23 42 / 6%);
+}

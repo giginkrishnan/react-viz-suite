@@ -1,0 +1,819 @@
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chartFrame {
+  position: relative;
+  width: 100%;
+}
+
+.hitArea {
+  fill: transparent;
+  pointer-events: all;
+  cursor: crosshair;
+}
+
+.hoverGuide {
+  stroke: #94a3b8;
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+  pointer-events: none;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 5;
+  transform: translate(-50%, calc(-100% - 10px));
+  display: grid;
+  gap: 0.12rem;
+  min-width: 7rem;
+  max-width: 11rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgb(15 23 42 / 12%);
+  pointer-events: none;
+}
+
+.tooltip strong {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #111827;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.25;
+}
+
+.tooltip span {
+  font-size: 0.7rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.svgCompact {
+  width: 100%;
+  height: auto;
+  max-height: 120px;
+}
+
+.svgSoft {
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+.barTrack {
+  fill: #eef2f5;
+}
+
+.barShell {
+  fill: #f7f8fa;
+  stroke: #e4e8ec;
+  stroke-width: 1.25;
+}
+
+.barOutline {
+  fill: none;
+  stroke: #6bb05f;
+  stroke-width: 1.75;
+}
+
+.barFillSoft {
+  fill: #e8f6e6;
+  stroke: #6bb05f;
+  stroke-width: 1.5;
+}
+
+.barFillActive {
+  fill: #d9f0d5;
+  stroke: #148106;
+  stroke-width: 1.75;
+}
+
+.barFillAmber {
+  fill: #fdeedc;
+  stroke: #d4924a;
+  stroke-width: 1.75;
+}
+
+.barFillAmberSoft {
+  fill: #fef6eb;
+  stroke: #e0a86a;
+  stroke-width: 1.5;
+}
+
+.barCap {
+  fill: var(--color-accent-deep);
+}
+
+.barCapSoft {
+  fill: #e8f6e6;
+  stroke: #6bb05f;
+  stroke-width: 1.5;
+}
+
+.barCapActive {
+  fill: #d9f0d5;
+  stroke: #148106;
+  stroke-width: 1.75;
+}
+
+.barCapAmber {
+  fill: #fdeedc;
+  stroke: #d4924a;
+  stroke-width: 1.75;
+}
+
+.barCapAmberSoft {
+  fill: #fef6eb;
+  stroke: #e0a86a;
+  stroke-width: 1.5;
+}
+
+.barValue {
+  fill: #9ca3af;
+  font-size: 8px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+}
+
+.checkMark {
+  fill: #8a5a22;
+  font-size: 8px;
+  font-weight: 600;
+  font-family: var(--font-sans);
+}
+
+.tick {
+  fill: #9ca3af;
+  font-size: 8px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+}
+
+/* Performance timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.35rem 1.4rem 1.25rem;
+  border: 1px solid #eef0f2;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.timelineHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.timelineCopy {
+  text-align: left;
+}
+
+.timelineCopy h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.timelineCopy p {
+  margin: 0.35rem 0 0;
+  font-size: 0.8125rem;
+  color: #9ca3af;
+}
+
+.timelineStage {
+  position: relative;
+  min-height: 168px;
+  padding: 1.5rem 0 2.75rem;
+}
+
+.timelineRail {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 64px;
+  padding: 0.85rem 0.75rem;
+  border-radius: 999px;
+  background: #f8fafb;
+  border: 1px solid #eef0f2;
+}
+
+.timelineNav {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.timelineNav:hover {
+  background: #fff;
+  color: #1f2937;
+}
+
+.timelineTrack {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 0.35rem;
+  align-items: end;
+  position: relative;
+  min-height: 54px;
+}
+
+.timelineSlot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  z-index: 1;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.timelineValue,
+.timelineValueSpacer {
+  display: block;
+  min-height: 14px;
+  font-size: 0.7rem;
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.timelineChip {
+  display: block;
+  width: 28px;
+  height: 14px;
+  border-radius: 999px;
+}
+
+.chip_cyan {
+  background: #e0f5f4;
+  border: 1.5px solid #4aada8;
+  box-sizing: border-box;
+}
+
+.chip_amber {
+  background: #fdeedc;
+  border: 1.5px solid #d4924a;
+  box-sizing: border-box;
+}
+
+.chip_empty {
+  background: transparent;
+  border: 1.5px solid #dbe2e8;
+  box-sizing: border-box;
+}
+
+.chipActive {
+  box-shadow: 0 0 0 3px rgb(20 129 6 / 16%);
+}
+
+.timelineMonth {
+  position: absolute;
+  top: calc(100% + 1.15rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.timelinePillar {
+  position: absolute;
+  top: -2.4rem;
+  bottom: -3.4rem;
+  left: 50%;
+  width: 72px;
+  transform: translateX(-50%);
+  border-radius: 18px;
+  background: rgb(148 163 184 / 7%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.timelineFloat {
+  position: absolute;
+  top: 0.15rem;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.timelineCard {
+  display: grid;
+  gap: 0.55rem;
+  min-width: 128px;
+  padding: 0.85rem 0.95rem;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #eef0f2;
+  box-shadow: 0 12px 28px rgb(15 23 42 / 8%);
+  text-align: left;
+  pointer-events: auto;
+}
+
+.timelinePeriod {
+  margin: 0 0 0.15rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.timelineCard p {
+  margin: 0;
+  font-size: 0.7rem;
+  color: #9ca3af;
+}
+
+.timelineCard strong {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.timelineDetails {
+  display: flex;
+  flex-direction: column;
+  min-width: 148px;
+  padding: 0.55rem 0.75rem;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #eef0f2;
+  box-shadow: 0 12px 28px rgb(15 23 42 / 8%);
+  pointer-events: auto;
+}
+
+.timelineDetailRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.85rem;
+  padding: 0.4rem 0;
+}
+
+.timelineDetailRow + .timelineDetailRow {
+  border-top: 1px solid #f3f4f6;
+}
+
+.timelineDetailRow span {
+  font-size: 0.72rem;
+  color: #9ca3af;
+}
+
+.timelineDetailRow strong {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #1f2937;
+  text-align: right;
+}
+
+.timelineFoot {
+  text-align: left;
+}
+
+.timelineTotal {
+  margin: 0;
+  font-size: 1.55rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #1f2937;
+}
+
+.timelineTotalLabel {
+  margin: 0.15rem 0 0;
+  font-size: 0.8125rem;
+  color: #6b7280;
+}
+
+.timelineNote {
+  margin: 0.85rem 0 0;
+  font-size: 0.75rem;
+  color: #c0c5cc;
+}
+
+.pill {
+  fill: rgb(20 129 6 / 18%);
+}
+
+.pillActive {
+  fill: #e4f3e2;
+  stroke: #6bb05f;
+  stroke-width: 1.5;
+}
+
+.pillMuted {
+  fill: #f3f6f8;
+  stroke: #d7e0e6;
+  stroke-width: 1.25;
+}
+
+.pillBadge {
+  fill: #fff;
+  stroke: #9ed099;
+  stroke-width: 1.25;
+}
+
+.pillBadgeText {
+  fill: #6b7280;
+  font-size: 8px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+}
+
+.line {
+  stroke: #1f2937;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.goalLine {
+  stroke: #cfcfcf;
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.glow {
+  fill: rgb(20 129 6 / 22%);
+}
+
+.targetRing {
+  fill: rgb(20 129 6 / 22%);
+  stroke: #6bb05f;
+  stroke-width: 1.25;
+}
+
+.dotOuter {
+  fill: #fff;
+  stroke: #1f2937;
+  stroke-width: 1.5;
+}
+
+.dotInner {
+  fill: #1f2937;
+}
+
+.delta {
+  fill: var(--color-accent-deep);
+  font-size: 10px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+}
+
+.deltaArrow {
+  fill: var(--color-accent-deep);
+}
+
+@keyframes chartFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes capsuleGrow {
+  from {
+    opacity: 0;
+    transform: scaleY(0.08);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes capsuleCheckIn {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pillGrow {
+  from {
+    opacity: 0;
+    transform: scaleY(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes multiLinePillIn {
+  from {
+    opacity: 0;
+    transform: scaleY(0.72);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes multiDotIn {
+  from {
+    opacity: 0;
+    transform: scale(0.15);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes multiLabelIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes multiGlowPulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes timelineSlotIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chartReveal .capsuleFill {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+
+.chartRevealed .capsuleFill {
+  animation: capsuleGrow 0.55s var(--ease-out) both;
+  animation-delay: var(--bar-delay, 0.08s);
+}
+
+.chartReveal .capsuleCheck {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.chartRevealed .capsuleCheck {
+  animation: capsuleCheckIn 0.35s var(--ease-spring) both;
+  animation-delay: calc(var(--bar-delay, 0.08s) + 0.28s);
+}
+
+.chartReveal .capsuleGroup .barValue,
+.chartReveal .capsuleGroup .tick {
+  opacity: 0;
+}
+
+.chartRevealed .capsuleGroup .barValue,
+.chartRevealed .capsuleGroup .tick {
+  animation: multiLabelIn 0.3s var(--ease-out) both;
+  animation-delay: calc(var(--bar-delay, 0.08s) + 0.2s);
+}
+
+.chartReveal .pillGroup {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+
+.chartRevealed .pillGroup {
+  animation: pillGrow 0.5s var(--ease-out) both;
+  animation-delay: var(--pill-delay, 0.1s);
+}
+
+.chartReveal .pillDot {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.chartRevealed .pillDot {
+  animation: multiDotIn 0.38s var(--ease-spring) both;
+  animation-delay: var(--dot-delay, 0.4s);
+}
+
+.chartReveal .pillDelta {
+  opacity: 0;
+}
+
+.chartRevealed .pillDelta {
+  animation: multiLabelIn 0.3s var(--ease-out) 0.55s both;
+}
+
+.chartReveal .timelineSlot {
+  opacity: 0;
+}
+
+.chartRevealed .timelineSlot {
+  animation: timelineSlotIn 0.4s var(--ease-out) both;
+  animation-delay: var(--slot-delay, 0.1s);
+}
+
+.chartReveal .timelineFloat,
+.chartReveal .timelineFoot {
+  opacity: 0;
+}
+
+.chartRevealed .timelineFloat,
+.chartRevealed .timelineFoot {
+  animation: chartFadeUp 0.45s var(--ease-out) 0.35s both;
+}
+
+.progressFillAnim {
+  transition: width 0.7s var(--ease-out);
+}
+
+.multiChart {
+  overflow: visible;
+}
+
+.multiPill {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+
+.multiChartAnimated .multiPill {
+  animation: multiLinePillIn 0.55s var(--ease-out) 0.12s both;
+}
+
+.multiLine {
+  vector-effect: non-scaling-stroke;
+}
+
+.multiDot {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.multiChartAnimated .multiDot {
+  animation: multiDotIn 0.4s var(--ease-spring) both;
+  animation-delay: var(--dot-delay, 0.45s);
+}
+
+.multiDotGlow {
+  opacity: 0.55;
+}
+
+.multiChartAnimated .multiDotGlow {
+  animation: multiGlowPulse 1.8s var(--ease-out) 1.05s infinite;
+}
+
+.multiLabel {
+  opacity: 0;
+}
+
+.multiChartAnimated .multiLabel {
+  animation: multiLabelIn 0.35s var(--ease-out) both;
+  animation-delay: var(--label-delay, 0.55s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chartReveal .capsuleFill,
+  .chartReveal .capsuleCheck,
+  .chartReveal .capsuleGroup .barValue,
+  .chartReveal .capsuleGroup .tick,
+  .chartReveal .pillGroup,
+  .chartReveal .pillDot,
+  .chartReveal .pillDelta,
+  .chartReveal .timelineSlot,
+  .chartReveal .timelineFloat,
+  .chartReveal .timelineFoot,
+  .multiPill,
+  .multiDot,
+  .multiLabel {
+    opacity: 1 !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .multiDotGlow {
+    animation: none !important;
+    opacity: 0.7 !important;
+  }
+
+  .progressFillAnim {
+    transition: none !important;
+  }
+}
+
+.tickAngled {
+  fill: #9ca3af;
+  font-size: 9px;
+  font-weight: 400;
+  font-family: var(--font-sans);
+}
+
+.progressTrack {
+  height: 8px;
+  border-radius: 999px;
+  background: #eef2f5;
+  overflow: hidden;
+}
+
+.progressFill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.tone_green {
+  background: #e8f6e6;
+  box-shadow: inset 0 0 0 1.5px #6bb05f;
+}
+
+.tone_deep {
+  background: #d9f0d5;
+  box-shadow: inset 0 0 0 1.5px #148106;
+}
+
+.tone_muted {
+  background: #f3f4f6;
+  box-shadow: inset 0 0 0 1.5px #9ca3af;
+}
+
+.heatstrip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 4px;
+}
+
+.heatstrip i {
+  display: block;
+  height: 10px;
+  border-radius: 4px;
+}
+
+.radarRing {
+  fill: none;
+  stroke: #d1d5db;
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+}
+
+.radarFill {
+  fill: rgb(20 129 6 / 18%);
+}
+
+.radarStroke {
+  stroke: var(--color-accent);
+  stroke-width: 2;
+}
+
+.radarCenter {
+  fill: var(--color-accent-deep);
+}
+
+.radarLabel {
+  fill: #9ca3af;
+  font-size: 8px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+}

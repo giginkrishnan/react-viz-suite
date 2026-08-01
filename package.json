@@ -1,0 +1,145 @@
+{
+  "name": "react-ggn-visual",
+  "version": "0.3.0",
+  "description": "Shared design tokens and React UI primitives (SoftList, charts, cards, tables)",
+  "license": "UNLICENSED",
+  "type": "module",
+  "files": [
+    "tokens.css",
+    "tokens.scss",
+    "bootstrap-map.scss",
+    "react",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./tokens.css",
+    "./tokens.css": "./tokens.css",
+    "./tokens.scss": "./tokens.scss",
+    "./bootstrap-map.scss": "./bootstrap-map.scss",
+    "./react": {
+      "types": "./react/index.d.ts",
+      "import": "./react/index.js",
+      "default": "./react/index.js"
+    },
+    "./react/cn": {
+      "types": "./react/cn.d.ts",
+      "import": "./react/cn.js",
+      "default": "./react/cn.js"
+    },
+    "./react/useScrollReveal": {
+      "types": "./react/useScrollReveal.d.ts",
+      "import": "./react/useScrollReveal.js",
+      "default": "./react/useScrollReveal.js"
+    },
+    "./react/LoadingState": {
+      "types": "./react/LoadingState.d.ts",
+      "import": "./react/LoadingState.jsx",
+      "default": "./react/LoadingState.jsx"
+    },
+    "./react/SoftList": {
+      "types": "./react/SoftList.d.ts",
+      "import": "./react/SoftList.tsx",
+      "default": "./react/SoftList.tsx"
+    },
+    "./react/Badge": {
+      "types": "./react/Badge.d.ts",
+      "import": "./react/Badge.tsx",
+      "default": "./react/Badge.tsx"
+    },
+    "./react/Button": {
+      "types": "./react/Button.d.ts",
+      "import": "./react/Button.tsx",
+      "default": "./react/Button.tsx"
+    },
+    "./react/Toast": {
+      "types": "./react/Toast.d.ts",
+      "import": "./react/Toast.tsx",
+      "default": "./react/Toast.tsx"
+    },
+    "./react/CopyableId": {
+      "types": "./react/CopyableId.d.ts",
+      "import": "./react/CopyableId.tsx",
+      "default": "./react/CopyableId.tsx"
+    },
+    "./react/RangeCalendar": {
+      "types": "./react/RangeCalendar.d.ts",
+      "import": "./react/RangeCalendar.tsx",
+      "default": "./react/RangeCalendar.tsx"
+    },
+    "./react/Sparkline": {
+      "types": "./react/Sparkline.d.ts",
+      "import": "./react/Sparkline.tsx",
+      "default": "./react/Sparkline.tsx"
+    },
+    "./react/InsightCard": {
+      "types": "./react/InsightCard.d.ts",
+      "import": "./react/InsightCard.tsx",
+      "default": "./react/InsightCard.tsx"
+    },
+    "./react/InsightStrip": {
+      "types": "./react/InsightStrip.d.ts",
+      "import": "./react/InsightStrip.tsx",
+      "default": "./react/InsightStrip.tsx"
+    },
+    "./react/DataTable": {
+      "types": "./react/DataTable.d.ts",
+      "import": "./react/DataTable.tsx",
+      "default": "./react/DataTable.tsx"
+    },
+    "./react/charts": {
+      "types": "./react/charts/index.d.ts",
+      "import": "./react/charts/index.ts",
+      "default": "./react/charts/index.ts"
+    },
+    "./react/icons": {
+      "types": "./react/icons/index.d.ts",
+      "import": "./react/icons/index.ts",
+      "default": "./react/icons/index.ts"
+    },
+    "./react/Logo": {
+      "types": "./react/icons/Logo.d.ts",
+      "import": "./react/icons/Logo.tsx",
+      "default": "./react/icons/Logo.tsx"
+    },
+    "./react/MountainScene": {
+      "types": "./react/icons/MountainScene.d.ts",
+      "import": "./react/icons/MountainScene.tsx",
+      "default": "./react/icons/MountainScene.tsx"
+    },
+    "./react/BookingIcons": {
+      "types": "./react/icons/BookingIcons.d.ts",
+      "import": "./react/icons/BookingIcons.tsx",
+      "default": "./react/icons/BookingIcons.tsx"
+    }
+  },
+  "peerDependencies": {
+    "lucide-react": ">=0.400.0",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "design-tokens",
+    "css-variables",
+    "charts",
+    "softlist",
+    "ui",
+    "ggn"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giginkrishnan/react-ggn-visual"
+  },
+  "bugs": {
+    "url": "https://github.com/giginkrishnan/react-ggn-visual/issues"
+  },
+  "homepage": "https://github.com/giginkrishnan/react-ggn-visual#readme",
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "typescript": "5.9"
+  }
+}

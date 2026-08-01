@@ -1,0 +1,118 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 0.65rem 0 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-line-soft, #eef0f2);
+  border-radius: 16px;
+  background: var(--color-surface, #fff);
+  box-shadow: 0 1px 0 rgb(15 23 42 / 2%);
+  animation: th-loading-rise-in var(--duration-base, 320ms) var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
+}
+
+.block {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 1.5rem 0;
+  padding: 1.35rem 1.25rem;
+}
+
+.orbit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: var(--radius-pill, 999px);
+  background: var(--color-status-confirmed-bg, #e8f6e6);
+  border: 1.5px solid var(--color-brand-muted, #6bb05f);
+  box-sizing: border-box;
+  animation: th-loading-bounce 900ms var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)) infinite;
+}
+
+.dotAmber {
+  animation-delay: 120ms;
+  background: var(--color-status-upcoming-bg, #fdeedc);
+  border-color: var(--color-status-upcoming-border, #d4924a);
+}
+
+.dotTeal {
+  animation-delay: 240ms;
+  background: #e0f5f4;
+  border-color: #4aada8;
+}
+
+.copy {
+  display: grid;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.label {
+  margin: 0;
+  color: var(--color-muted-strong, #6b7280);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+.bar {
+  display: block;
+  height: 0.28rem;
+  width: min(8.5rem, 100%);
+  border-radius: var(--radius-pill, 999px);
+  background: linear-gradient(
+    90deg,
+    #eef8ec 0%,
+    #dcefd8 35%,
+    var(--color-canvas, #f7f8fa) 55%,
+    #eef8ec 100%
+  );
+  background-size: 200% 100%;
+  animation: th-loading-shimmer 1.15s linear infinite;
+}
+
+@keyframes th-loading-rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes th-loading-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes th-loading-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root,
+  .dot,
+  .bar {
+    animation: none;
+  }
+}

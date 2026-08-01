@@ -1,0 +1,67 @@
+.strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.15rem;
+  font-family: var(--font-sans);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.cardsVertical {
+  grid-template-columns: 1fr;
+  max-width: none;
+}
+
+.chartCard {
+  padding: 1.15rem 1.25rem 1rem;
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  border: 1px solid #eef0f2;
+  box-shadow: var(--shadow-soft);
+}
+
+.chartHead {
+  text-align: left;
+  margin-bottom: 0.65rem;
+}
+
+.chartHead h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.chartHead p {
+  margin: 0.25rem 0 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.chartBody {
+  min-width: 0;
+}
+
+.chartBody > :global(svg),
+.chartBody > :global(.chartFrame) > :global(svg) {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+}
+
+/* Nested custom charts may opt out via their own styles */
+.chartBody :global(.chartFrame) {
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

@@ -236,8 +236,11 @@ export declare function MultiSeriesLineChart(props: Record<string, unknown>): Re
 export declare function PerformanceTimeline(props: Record<string, unknown>): ReactElement
 export declare function ProgressBar(props: {
   value: number
+  max?: number
+  tone?: 'green' | 'deep' | 'muted' | 'danger'
+  variant?: 'soft' | 'solid'
+  size?: 'sm' | 'md'
   className?: string
-  style?: CSSProperties
 }): ReactElement
 export declare function Heatstrip(props: { values: number[] }): ReactElement
 export declare function RadarChart(props: {

@@ -1115,29 +1115,52 @@ export function MultiSeriesLineChart({
 type ProgressBarProps = {
   value: number
   max?: number
-  tone?: 'green' | 'deep' | 'muted'
+  tone?: 'green' | 'deep' | 'muted' | 'danger'
+  /** soft = capsule outline fill; solid = SoftList-style bar */
+  variant?: 'soft' | 'solid'
+  size?: 'sm' | 'md'
+  className?: string
 }
 
 export function ProgressBar({
   value,
   max = 100,
   tone = 'green',
+  variant = 'soft',
+  size = 'md',
+  className,
 }: ProgressBarProps) {
   const pct = Math.max(0, Math.min(100, (value / Math.max(max, 1)) * 100))
   const { ref, revealed } = useScrollReveal<HTMLDivElement>({
-    resetKey: `${value}:${max}`,
+    resetKey: `${value}:${max}:${tone}:${variant}`,
     threshold: 0.2,
   })
   return (
     <div
       ref={ref}
-      className={`${styles.progressTrack} ${styles.chartReveal} ${
-        revealed ? styles.chartRevealed : ''
-      }`}
-      aria-hidden
+      className={[
+        styles.progressTrack,
+        size === 'sm' ? styles.progressTrackSm : null,
+        styles.chartReveal,
+        revealed ? styles.chartRevealed : null,
+        className,
+      ]
+        .filter(Boolean)
+        .join(' ')}
+      role="progressbar"
+      aria-valuenow={Math.round(pct)}
+      aria-valuemin={0}
+      aria-valuemax={100}
     >
       <i
-        className={`${styles.progressFill} ${styles[`tone_${tone}`]} ${styles.progressFillAnim}`}
+        className={[
+          styles.progressFill,
+          variant === 'solid' ? styles.progressFillSolid : null,
+          styles[`tone_${tone}`],
+          styles.progressFillAnim,
+        ]
+          .filter(Boolean)
+          .join(' ')}
         style={{ width: revealed ? `${pct}%` : '0%' }}
       />
     </div>

@@ -251,7 +251,7 @@ Custom SVG charts (no chart.js / recharts). Most use `useScrollReveal` for on-sc
 | `PillLineChart` | `values`, `labels`, `highlightIndexes`, `deltas`, `width`, `height` | Single series with callouts |
 | `MultiSeriesLineChart` | `labels`, `series: MultiSeriesLine[]` | Compare series (e.g. platforms) |
 | `PerformanceTimeline` | week segments + active index | Interactive week picker banner |
-| `ProgressBar` | `value` (0–1) | Simple fill |
+| `ProgressBar` | `value`, `max`, `tone`, `variant`, `size` | Horizontal progress (`soft`/`solid`, `sm`/`md`) |
 | `Heatstrip` | `values: number[]` | Intensity row |
 | `RadarChart` | `axes: { label, value }[]` | Multi-axis score |
 | `MiniStackedBars` | `data: { label, a, b }[]` | Compact stacked weekly |

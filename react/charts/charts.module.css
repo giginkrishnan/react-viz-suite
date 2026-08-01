@@ -757,10 +757,34 @@
   overflow: hidden;
 }
 
+.progressTrackSm {
+  height: 0.28rem;
+}
+
 .progressFill {
   display: block;
   height: 100%;
   border-radius: inherit;
+}
+
+.progressFillSolid.tone_green {
+  background: #57c785;
+  box-shadow: none;
+}
+
+.progressFillSolid.tone_deep {
+  background: #148106;
+  box-shadow: none;
+}
+
+.progressFillSolid.tone_muted {
+  background: #d1d5db;
+  box-shadow: none;
+}
+
+.progressFillSolid.tone_danger {
+  background: #f97066;
+  box-shadow: none;
 }
 
 .tone_green {
@@ -776,6 +800,11 @@
 .tone_muted {
   background: #f3f4f6;
   box-shadow: inset 0 0 0 1.5px #9ca3af;
+}
+
+.tone_danger {
+  background: #fee4e2;
+  box-shadow: inset 0 0 0 1.5px #f97066;
 }
 
 .heatstrip {

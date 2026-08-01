@@ -59,7 +59,7 @@ import 'react-viz-suite/tokens.css'
 | **PillLineChart** | same | Pill-marker line chart |
 | **MultiSeriesLineChart** | same | Multi-series line chart |
 | **PerformanceTimeline** | same | Week-segment timeline picker |
-| **ProgressBar** | same | Horizontal progress |
+| **ProgressBar** | same | Horizontal progress (`soft`/`solid`, `sm`/`md`) |
 | **Heatstrip** | same | Intensity strip |
 | **RadarChart** | same | Radar / spider chart |
 | **MiniStackedBars** | same | Compact stacked bars |

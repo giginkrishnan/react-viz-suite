@@ -1,6 +1,6 @@
 {
   "name": "react-viz-suite",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Shared design tokens and React UI primitives (SoftList, charts, cards, tables)",
   "license": "UNLICENSED",
   "type": "module",
@@ -132,7 +132,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/giginkrishnan/react-viz-suite"
+    "url": "git+https://github.com/giginkrishnan/react-viz-suite.git"
   },
   "bugs": {
     "url": "https://github.com/giginkrishnan/react-viz-suite/issues"

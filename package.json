@@ -1,6 +1,6 @@
 {
   "name": "react-viz-suite",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Shared design tokens and React UI primitives (SoftList, charts, cards, tables)",
   "license": "UNLICENSED",
   "type": "module",
@@ -81,6 +81,11 @@
       "types": "./react/InsightStrip.d.ts",
       "import": "./react/InsightStrip.tsx",
       "default": "./react/InsightStrip.tsx"
+    },
+    "./react/InsightBoard": {
+      "types": "./react/InsightBoard.d.ts",
+      "import": "./react/InsightBoard.tsx",
+      "default": "./react/InsightBoard.tsx"
     },
     "./react/DataTable": {
       "types": "./react/DataTable.d.ts",

@@ -1,0 +1,133 @@
+/* Matches corporate-web / admin InsightsOverview insight board layout */
+
+.board {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eef0f2;
+  border-radius: 18px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.6fr);
+  align-items: stretch;
+}
+
+.row + .row {
+  border-top: 1px solid #eef0f2;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  padding: 1.5rem 1.5rem 1.4rem;
+  text-align: left;
+  border-right: 1px solid #eef0f2;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1f2937;
+  text-align: left;
+}
+
+.description {
+  margin: 0;
+  max-width: 16rem;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: #9ca3af;
+  text-align: left;
+}
+
+.metricValue {
+  margin: 0;
+  max-width: none;
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: #1f2937;
+  letter-spacing: -0.02em;
+}
+
+.metricLabel {
+  margin: 0.15rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #9ca3af;
+}
+
+.metricHint {
+  margin: 1.1rem 0 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #9ca3af;
+}
+
+.action {
+  margin-top: 0.85rem;
+}
+
+.action :global(a),
+.action :global(button) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.45rem 0.8rem;
+  border: 0;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #4b5563;
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.85rem 1.1rem 0.65rem;
+  min-width: 0;
+  text-align: left;
+}
+
+.chartEyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #9ca3af;
+}
+
+.chartCallout {
+  margin: 0 0 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.chart :global(svg) {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+}
+
+@media (max-width: 900px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .copy {
+    border-right: 0;
+    border-bottom: 1px solid #eef0f2;
+  }
+}

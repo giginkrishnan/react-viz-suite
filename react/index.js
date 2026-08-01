@@ -23,6 +23,7 @@ export { RangeCalendar } from './RangeCalendar.tsx'
 export { Sparkline } from './Sparkline.tsx'
 export { InsightCard } from './InsightCard.tsx'
 export { InsightStrip } from './InsightStrip.tsx'
+export { InsightBoard, InsightMetricRow } from './InsightBoard.tsx'
 export { DataTable, MetaBar } from './DataTable.tsx'
 export {
   CapsuleBarChart,

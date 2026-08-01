@@ -30,6 +30,157 @@ Load tokens once in the app shell:
 import 'react-viz-suite/tokens.css'
 ```
 
+## Component previews
+
+Illustrative previews (brand green `#148106`). Full API notes: **[docs/COMPONENTS.md](docs/COMPONENTS.md)**.
+
+### SoftList
+
+![SoftList](docs/previews/softlist.jpg)
+
+Soft row list system — items, media, meta cells, covers, and router `to=` rows via `SoftListLinkProvider`.
+
+### Button
+
+![Button](docs/previews/button.jpg)
+
+`primary` / `secondary` / `ghost` / `outline`
+
+### Badge
+
+![Badge](docs/previews/badge.jpg)
+
+Status chip — `upcoming` / `confirmed` / `completed` / `neutral`
+
+### LoadingState
+
+![LoadingState](docs/previews/loading-state.jpg)
+
+Orbit + shimmer loader (`inline` / `block`)
+
+### Toast
+
+![Toast](docs/previews/toast.jpg)
+
+`ToastProvider` / `useToast` — success / error / info
+
+### CopyableId
+
+![CopyableId](docs/previews/copyable-id.jpg)
+
+Mono ID + copy button (`shortenId` helper)
+
+### RangeCalendar
+
+![RangeCalendar](docs/previews/range-calendar.jpg)
+
+Date-range picker
+
+### Sparkline
+
+![Sparkline](docs/previews/sparkline.jpg)
+
+Tiny SVG trend line
+
+### InsightCard
+
+![InsightCard](docs/previews/insight-card.jpg)
+
+Animated stat card
+
+### InsightStrip
+
+![InsightStrip](docs/previews/insight-strip.jpg)
+
+Card row + optional chart panel
+
+### DataTable & MetaBar
+
+![DataTable](docs/previews/data-table.jpg)
+
+Generic column table with pagination / totals summary
+
+### InsightBoard + chart primitives (dashboard)
+
+These screenshots are the **exact** components in this package — not AI mockups.
+
+| Piece | Import |
+|-------|--------|
+| Board layout (left copy + right chart) | `react-viz-suite/react/InsightBoard` → `InsightBoard`, `InsightMetricRow` |
+| Line with green pill callouts | `react-viz-suite/react/charts` → `PillLineChart` |
+| Vertical capsule bars | same → `CapsuleBarChart` |
+| Week scrubber + hover cards | same → `PerformanceTimeline` |
+
+Used by `triphype-admin` and `triphype-corporate-web` home dashboards (`InsightsOverview`).
+
+![InsightBoard with PillLineChart + CapsuleBarChart](docs/previews/pill-line-and-capsule.jpg)
+
+![InsightBoard — Change Impact / Bookings by week](docs/previews/pill-line-chart.jpg)
+
+### CapsuleBarChart (close-up)
+
+![CapsuleBarChart](docs/previews/capsule-bar-chart.jpg)
+
+### PerformanceTimeline
+
+![PerformanceTimeline](docs/previews/performance-timeline.jpg)
+
+### MultiSeriesLineChart
+
+![MultiSeriesLineChart](docs/previews/multi-series-line-chart.jpg)
+
+### ProgressBar
+
+![ProgressBar](docs/previews/progress-bar.jpg)
+
+Horizontal progress (`soft` / `solid`, `sm` / `md`)
+
+### Heatstrip
+
+![Heatstrip](docs/previews/heatstrip.jpg)
+
+Intensity strip
+
+### RadarChart
+
+![RadarChart](docs/previews/radar-chart.jpg)
+
+Radar / spider chart
+
+### MiniStackedBars
+
+![MiniStackedBars](docs/previews/mini-stacked-bars.jpg)
+
+### MiniAreaChart
+
+![MiniAreaChart](docs/previews/mini-area-chart.jpg)
+
+### MiniDonut
+
+![MiniDonut](docs/previews/mini-donut.jpg)
+
+### MiniTrendChart
+
+![MiniTrendChart](docs/previews/mini-trend-chart.jpg)
+
+Convenience bars/line wrapper
+
+### Logo
+
+![Logo](docs/previews/logo.jpg)
+
+### MountainScene
+
+![MountainScene](docs/previews/mountain-scene.jpg)
+
+Decorative SVG scene
+
+### BookingIcons
+
+![BookingIcons](docs/previews/booking-icons.jpg)
+
+`FlightBookingIcon` / `HotelBookingIcon`
+
 ## Component catalog
 
 | Component | Import | Description |
@@ -53,6 +204,7 @@ import 'react-viz-suite/tokens.css'
 | **Sparkline** | `…/Sparkline` | Tiny SVG trend line |
 | **InsightCard** | `…/InsightCard` | Animated stat card |
 | **InsightStrip** | `…/InsightStrip` | Card row + optional chart panel |
+| **InsightBoard** / **InsightMetricRow** | `…/InsightBoard` | Dashboard left-copy + right-chart rows |
 | **DataTable** | `…/DataTable` | Generic column table |
 | **MetaBar** | same | Pagination / totals summary |
 | **CapsuleBarChart** | `…/charts` | Capsule bar chart |
@@ -71,8 +223,6 @@ import 'react-viz-suite/tokens.css'
 | **FlightBookingIcon** / **HotelBookingIcon** | `…/BookingIcons` | Booking glyphs |
 | **cn** | `…/cn` | Classname join helper |
 | **useScrollReveal** | `…/useScrollReveal` | Scroll-into-view reveal hook |
-
-Full API notes: **[docs/COMPONENTS.md](docs/COMPONENTS.md)**.
 
 ## Quick start
 

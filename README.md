@@ -2,7 +2,7 @@
 
 Shared design tokens and React UI primitives — SoftList, charts, cards, tables, and feedback components.
 
-**Version:** `0.3.3` · [GitHub](https://github.com/giginkrishnan/react-viz-suite) · [npm](https://www.npmjs.com/package/react-viz-suite)
+**Version:** `0.3.4` · [GitHub](https://github.com/giginkrishnan/react-viz-suite) · [npm](https://www.npmjs.com/package/react-viz-suite)
 
 Formerly `@giginkrishnan/triphype-design`.
 
@@ -10,8 +10,6 @@ Formerly `@giginkrishnan/triphype-design`.
 
 ```bash
 npm install react-viz-suite
-# local monorepo sibling
-npm install file:../react-viz-suite
 ```
 
 **Peers:** `react` ≥18, `react-dom` ≥18, `lucide-react` ≥0.400 (Toast, CopyableId, RangeCalendar).
@@ -33,6 +31,27 @@ import 'react-viz-suite/tokens.css'
 ## Component previews
 
 Illustrative previews (brand green `#148106`). Full API notes: **[docs/COMPONENTS.md](docs/COMPONENTS.md)**.
+
+### InsightBoard + chart primitives (dashboard)
+
+Live admin dashboard using suite charts (`InsightBoard` + `PillLineChart` + `CapsuleBarChart`):
+
+![Dashboard InsightBoard — Change Impact and Bookings by week](docs/previews/dashboard-insight-board.jpg)
+
+These screenshots are the **exact** components in this package — not AI mockups.
+
+| Piece | Import |
+|-------|--------|
+| Board layout (left copy + right chart) | `react-viz-suite/react/InsightBoard` → `InsightBoard`, `InsightMetricRow` |
+| Line with green pill callouts | `react-viz-suite/react/charts` → `PillLineChart` |
+| Vertical capsule bars | same → `CapsuleBarChart` |
+| Week scrubber + hover cards | same → `PerformanceTimeline` |
+
+Used by `triphype-admin` and `triphype-corporate-web` home dashboards (`InsightsOverview`).
+
+![InsightBoard with PillLineChart + CapsuleBarChart](docs/previews/pill-line-and-capsule.jpg)
+
+![InsightBoard — Change Impact / Bookings by week](docs/previews/pill-line-chart.jpg)
 
 ### SoftList
 
@@ -100,27 +119,6 @@ Card row + optional chart panel
 
 Generic column table with pagination / totals summary
 
-### InsightBoard + chart primitives (dashboard)
-
-Live admin dashboard using suite charts (`InsightBoard` + `PillLineChart` + `CapsuleBarChart`):
-
-![Dashboard InsightBoard — Change Impact and Bookings by week](docs/previews/dashboard-insight-board.jpg)
-
-These screenshots are the **exact** components in this package — not AI mockups.
-
-| Piece | Import |
-|-------|--------|
-| Board layout (left copy + right chart) | `react-viz-suite/react/InsightBoard` → `InsightBoard`, `InsightMetricRow` |
-| Line with green pill callouts | `react-viz-suite/react/charts` → `PillLineChart` |
-| Vertical capsule bars | same → `CapsuleBarChart` |
-| Week scrubber + hover cards | same → `PerformanceTimeline` |
-
-Used by `triphype-admin` and `triphype-corporate-web` home dashboards (`InsightsOverview`).
-
-![InsightBoard with PillLineChart + CapsuleBarChart](docs/previews/pill-line-and-capsule.jpg)
-
-![InsightBoard — Change Impact / Bookings by week](docs/previews/pill-line-chart.jpg)
-
 ### CapsuleBarChart (close-up)
 
 ![CapsuleBarChart](docs/previews/capsule-bar-chart.jpg)
@@ -168,10 +166,6 @@ Radar / spider chart
 ![MiniTrendChart](docs/previews/mini-trend-chart.jpg)
 
 Convenience bars/line wrapper
-
-### Logo
-
-![Logo](docs/previews/logo.jpg)
 
 ### MountainScene
 
@@ -222,7 +216,6 @@ Decorative SVG scene
 | **MiniAreaChart** | same | Compact area chart |
 | **MiniDonut** | same | Compact donut |
 | **MiniTrendChart** | same | Convenience bars/line wrapper |
-| **Logo** | `…/Logo` | Triphype logo image |
 | **MountainScene** | `…/MountainScene` | Decorative SVG scene |
 | **FlightBookingIcon** / **HotelBookingIcon** | `…/BookingIcons` | Booking glyphs |
 | **cn** | `…/cn` | Classname join helper |
@@ -271,9 +264,3 @@ Fonts are consumer-provided (`--font-sans`, `--font-display`).
 ## License
 
 [MIT](LICENSE) © 2026 Gigin Krishnan
-
-## Publish
-
-```bash
-npm publish --access public --otp=<code>
-```

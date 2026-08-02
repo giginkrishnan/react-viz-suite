@@ -2,7 +2,7 @@
 
 Shared design tokens and React UI primitives — SoftList, charts, cards, tables, and feedback components.
 
-**Version:** `0.3.0` · [GitHub](https://github.com/giginkrishnan/react-viz-suite) · [npm](https://www.npmjs.com/package/react-viz-suite)
+**Version:** `0.3.3` · [GitHub](https://github.com/giginkrishnan/react-viz-suite) · [npm](https://www.npmjs.com/package/react-viz-suite)
 
 Formerly `@giginkrishnan/triphype-design`.
 
@@ -267,6 +267,10 @@ import 'react-viz-suite/tokens.css'
 ```
 
 Fonts are consumer-provided (`--font-sans`, `--font-display`).
+
+## License
+
+[MIT](LICENSE) © 2026 Gigin Krishnan
 
 ## Publish
 

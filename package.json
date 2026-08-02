@@ -1,8 +1,8 @@
 {
   "name": "react-viz-suite",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Shared design tokens and React UI primitives (SoftList, charts, cards, tables)",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "type": "module",
   "files": [
     "tokens.css",
@@ -10,7 +10,8 @@
     "bootstrap-map.scss",
     "react",
     "docs",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "exports": {
     ".": "./tokens.css",

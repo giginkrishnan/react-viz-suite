@@ -102,6 +102,10 @@ Generic column table with pagination / totals summary
 
 ### InsightBoard + chart primitives (dashboard)
 
+Live admin dashboard using suite charts (`InsightBoard` + `PillLineChart` + `CapsuleBarChart`):
+
+![Dashboard InsightBoard — Change Impact and Bookings by week](docs/previews/dashboard-insight-board.jpg)
+
 These screenshots are the **exact** components in this package — not AI mockups.
 
 | Piece | Import |
